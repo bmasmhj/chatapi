@@ -1,0 +1,16 @@
+php_value max_input_vars 10000
+
+ErrorDocument 400 https://bimash.com.np/Error/400
+ErrorDocument 401 https://bimash.com.np/Error/401
+ErrorDocument 403 https://bimash.com.np/Error/403
+ErrorDocument 404 https://bimash.com.np/Error/404
+ErrorDocument 503 https://bimash.com.np/Error/503
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+RewriteRule ^(.*)$ $1.html [NC,L]
+RewriteRule ^Hotspot hotspot.php [NC,L]
