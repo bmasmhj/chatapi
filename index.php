@@ -31,19 +31,19 @@
 // });
 
 // get group chat
-$.ajax({
-    url : "http://localhost/chatapi/get-group-message",
-    method : "GET",
-    data : { group_id : '6374d3182aade' , receiver_id : '855184'  }
-}).done(function (response) {
-    console.log(JSON.parse(response));
-});
+// $.ajax({
+//     url : "http://localhost/chatapi/get-group-message",
+//     method : "GET",
+//     data : { group_id : '6374d312aade' , receiver_id : '855184'  }
+// }).done(function (response) {
+//     console.log(JSON.parse(response));
+// });
 
 // Create group
 // $.ajax({
 //     url : "http://localhost/chatapi/create-group",
 //     method : "POST",
-//     data : { creategroup : 'Full Stacks Developers 2' , creator : '855184' }
+//     data : { creategroup : 'Full Stacks Developers' , creator : '855184' }
 // }).done(function (response) {
 //     console.log(JSON.parse(response));
 // });
