@@ -24,12 +24,12 @@
 <br/>
 <br/>
  <h4>Create Group</h4>
-- url : "your-api-site/create-group",
+- url : your-api-site/create-group,
 <br/>- method : POST
 <br/>- data : { creategroup : 'Group Name' , creator : '855184' }
 <br/>
  <h4>Get Group Message</h4>
-- url : "your-api-site/get-group-message",
+- url : your-api-site/get-group-message,
 <br/>- method : GET
 <br/>- data : { group_id : '6374d3182aade' , receiver_id : '855184'  }
 
