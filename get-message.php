@@ -1,10 +1,11 @@
 <?php 
-
-    if(isset($_GET['sender_id']) && isset($_GET['receiver_id']) ){
+$output = "";
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $output .= '{ "type":"error" , "message" : "This Route does not support POST method" }';
+}else if(isset($_GET['sender_id']) && isset($_GET['receiver_id']) ){
         include_once "conn.php";
         $outgoing_id = $_GET['sender_id'];
         $incoming_id = mysqli_real_escape_string($conn, $_GET['receiver_id']);
-        $output = "";
         $i = 0;
         $k = 0;
         $data = [];
@@ -36,9 +37,9 @@
         }else{
             $output .= '{ "nomessage" : "true", "type":"none" , "message" : "No messages are available. Once you send messages they will appear here" , "time" : "0" }';
         }
-        echo $output;
-    }else{
-        $output .= '{ "type":"error" , "message" : "Invalid Input" }';
-    }
+}else{
+    $output .= '{ "type":"error" , "message" : "Invalid Input" }';
+}
+echo $output;
 
 ?>
