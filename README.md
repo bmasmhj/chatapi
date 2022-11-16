@@ -31,10 +31,11 @@ Create Group
 <br/>&#9;-method : POST
 <br/>&#9;-data : { creategroup : 'Group Name' , creator : '855184' }
 <br/>
+<br/>
 Get Group Message
 <br/>
 <br/>&#9;-url : "your-api-site/get-group-message",
 <br/>&#9;-method : GET
--<br/>data : { group_id : '6374d3182aade' , receiver_id : '855184'  }
+<br/>&#9;-data : { group_id : '6374d3182aade' , receiver_id : '855184'  }
 
 
