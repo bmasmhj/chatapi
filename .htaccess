@@ -15,6 +15,10 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 RewriteRule ^get-message get-message.php [NC,L]
 RewriteRule ^get-group-message get-group-message.php [NC,L]
+RewriteRule ^insert-group-message insert-group-message.php [NC,L]
 RewriteRule ^insert-chat insert-chat.php [NC,L]
 RewriteRule ^get-users get-users.php [NC,L]
 RewriteRule ^create-group create-group.php [NC,L]
+RewriteRule ^create-user create-user.php [NC,L]
+
+

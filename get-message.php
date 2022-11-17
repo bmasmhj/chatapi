@@ -4,8 +4,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $output .= '{ "type":"error" , "message" : "This Route does not support POST method" }';
 }else if(isset($_GET['sender_id']) && isset($_GET['receiver_id']) ){
         include_once "conn.php";
-        $outgoing_id = $_GET['sender_id'];
-        $incoming_id = mysqli_real_escape_string($conn, $_GET['receiver_id']);
+        $outgoing_id = mysqli_real_escape_string($conn, $_GET['receiver_id']);
+        $incoming_id = mysqli_real_escape_string($conn, $_GET['sender_id']);
         $i = 0;
         $k = 0;
         $data = [];

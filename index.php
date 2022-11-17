@@ -15,29 +15,23 @@
 //     $.ajax({
 //     url : "http://localhost/chatapi/insert-chat",
 //     method : "POST",
-//     data : { sender_id : '85632158' , receiver_id : '855184' , message : 'thanks buddy' }
+//     data : { sender_id : '85632158' , receiver_id : '855184' , message : 'hello this new msg' }
 // }).done(function (response) {
 //     console.log(JSON.parse(response));
 // });
 
 
 //get chat
+
 // $.ajax({
 //     url : "http://localhost/chatapi/get-message",
 //     method : "GET",
-//     data : { sender_id : '855184' , receiver_id : '85632158'  }
+//     data : { sender_id : '85632158' , receiver_id : '855184'  }
 // }).done(function (response) {
 //     console.log(JSON.parse(response));
 // });
 
-// get group chat
-// $.ajax({
-//     url : "http://localhost/chatapi/get-group-message",
-//     method : "GET",
-//     data : { group_id : '6374d312aade' , receiver_id : '855184'  }
-// }).done(function (response) {
-//     console.log(JSON.parse(response));
-// });
+
 
 // Create group
 // $.ajax({
@@ -47,6 +41,27 @@
 // }).done(function (response) {
 //     console.log(JSON.parse(response));
 // });
+
+// insert group chat
+// $.ajax({
+//     url : "http://localhost/chatapi/insert-group-message",
+//     method : "POST",
+//     data : { group_table : '6374d9eb760e9' , receiver_id : '855184' , message : 'I sended message' }
+// }).done(function (response) {
+//     console.log(JSON.parse(response));
+// });
+
+// get group chat
+// $.ajax({
+//     url : "http://localhost/chatapi/get-group-message",
+//     method : "GET",
+//     data : { group_id : '6374d9eb760e9' , receiver_id : '855184'  }
+// }).done(function (response) {
+//     console.log(JSON.parse(response));
+// });
+
+
+
 
 
 
