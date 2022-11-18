@@ -1,4 +1,5 @@
 <?php
+require 'origin.php';
 
 $dt = new DateTime();
 $dt->setTimezone(new DateTimeZone('Asia/Kathmandu'));

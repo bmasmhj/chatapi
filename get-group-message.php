@@ -1,4 +1,6 @@
 <?php 
+require 'origin.php';
+
 $output = "";
 $i = 0;
 $data = [];

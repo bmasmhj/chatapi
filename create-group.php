@@ -1,4 +1,6 @@
 <?php
+require 'origin.php';
+
 $output = '';
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
     $output .= '{ "type":"error" , "message" : "This Route does not support GET method" }';

@@ -1,5 +1,5 @@
 <?php 
-
+require 'origin.php';
 $dt = new DateTime();
 $dt->setTimezone(new DateTimeZone('Asia/Kathmandu'));
 $dts = $dt->format('Y-m-d H:i:s');
