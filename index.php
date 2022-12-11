@@ -23,20 +23,31 @@
 
 //get chat
 
-var myHeaders = new Headers();
-myHeaders.append("Cookie", "_test=7e4f71eb25a5e886fcafa9c8ce2f3f61");
+// var settings = {
+//   "url": "http://chatapi.epizy.com/chatapi/get-message.php?sender_id=85632158&receiver_id=855184",
+//   "method": "POST",
+//   "timeout": 0,
+// };
 
-var requestOptions = {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
+// $.ajax(settings).done(function (response) {
+//   console.log(response);
+// });
 
-fetch("https://chatapi.epizy.com/chatapi/get-message?sender_id=85632158&receiver_id=855184", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+const data = { sender_id: '85632158'  ,receiver_id : '855184' };
 
+fetch('http://chatapi.epizy.com/chatapi/get-message.php', {
+method: 'POST',
+body: JSON.stringify(data),
+})
+.then((response) => response.json())
+.then((data) => {
+    console.log('Success:', data);
+        // your code here
+})
+
+.catch((error) => {
+    console.error('Error:', error);
+}); 
 
 // Create group
 // $.ajax({
